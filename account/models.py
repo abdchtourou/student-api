@@ -34,6 +34,3 @@ class CustomUser(AbstractUser):
     def save(self, *args, **kwargs):
         self._meta.get_field('username')._unique = False
         super().save(*args, **kwargs)
-
-
-

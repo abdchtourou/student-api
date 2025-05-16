@@ -12,3 +12,9 @@ class StudentViewSet(viewsets.ModelViewSet):
     filterset_fields = ['name', 'email', 'major']
     search_fields = ['name', 'email', 'major']
     ordering_fields = ['created_at', 'updated_at']
+
+    
+
+
+
+

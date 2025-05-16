@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'student.apps.StudentConfig',
     'corsheaders',
+    'todoList.apps.TodolistConfig'
 ]
 
 MIDDLEWARE = [
@@ -85,11 +86,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student',     # Your database name
-        'USER': 'root',          # Your MySQL username
-        'PASSWORD': '',          # Your MySQL password
-        'HOST': 'localhost',     # Your MySQL host
-        'PORT': '3306',          # MySQL port
+        'NAME': 'student',       
+        'USER': 'root',          
+        'PASSWORD': '',          
+        'HOST': 'localhost',
+        'PORT': '3306',          
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'",
             'charset': 'utf8mb4',

@@ -6,6 +6,7 @@ A Django REST Framework API for managing student records with authentication and
 
 - User authentication with JWT tokens
 - Student record management
+- Todo List management
 - Email-based authentication
 - Secure password hashing with bcrypt
 - Comprehensive logging system
@@ -94,6 +95,21 @@ python manage.py runserver
 
 - `GET /api/user/` - Get authenticated user data (requires authentication)
 
+### Todo List
+
+- `GET /api/todos/` - List all todos
+- `POST /api/todos/` - Create a new todo
+  ```json
+  {
+    "title": "Task title",
+    "description": "Task description",
+    "completed": false
+  }
+  ```
+- `GET /api/todos/{id}/` - Retrieve a specific todo
+- `PUT /api/todos/{id}/` - Update a todo
+- `DELETE /api/todos/{id}/` - Delete a todo
+
 ## Project Structure
 
 ```
@@ -105,6 +121,11 @@ student-api/
 ├── student/                # Student management app
 │   ├── models.py           # Student model
 │   └── views.py            # Student views
+├── todoList/               # Todo List app
+│   ├── models.py           # Todo model
+│   ├── serializers.py      # Todo serializers
+│   ├── urls.py            # Todo URLs
+│   └── views.py            # Todo views
 ├── config/                 # Project configuration
 │   ├── settings.py         # Django settings
 │   ├── urls.py            # URL routing
